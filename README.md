@@ -42,6 +42,6 @@
 <br>
 <h4 align="center"><I>This project leverages a robust tech stack consisting of FastAPI, Scikit-learn, PyTorch, TensorFlow, Power BI, PostGIS, and Kafka to build a scalable and efficient data science application, specifically focused on optimizing routes for India Post. </I></h4>
 <div align="center">
-### 𝚂𝚑𝚘𝚠 𝚜𝚘𝚖𝚎 ❤️ 𝚋𝚢 𝚜𝚝𝚊𝚛𝚛𝚒𝚗𝚐 𝚜𝚘𝚖𝚎 𝚘𝚏 𝚝𝚑𝚎 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛𝚒𝚎𝚜!
+### 𝚂𝚑𝚘𝚠 𝚜𝚘𝚖𝚎 ❤️ 𝚋𝚢 𝚜𝚝𝚊𝚛𝚛𝚒𝚗𝚐 this 𝚛𝚎𝚙𝚘𝚜𝚒𝚝𝚘𝚛y!
 </div>
 
