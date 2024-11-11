@@ -28,6 +28,7 @@ def update_truck(truck_id, truck):
     truck_obj.current_load = truck.current_load
     truck_obj.route_id = truck.route_id
     truck_obj.location = truck.location
+    0
     truck_obj.status = truck.status
     session.commit()
 
