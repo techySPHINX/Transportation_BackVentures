@@ -1,7 +1,7 @@
 # routes/packages.py
 from fastapi import APIRouter, HTTPException
 from models import Package
-from db import get_package, update_package
+from app.db import get_package, update_package
 
 router = APIRouter()
 

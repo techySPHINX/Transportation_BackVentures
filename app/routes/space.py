@@ -2,7 +2,7 @@
 from fastapi import APIRouter, HTTPException
 from models import Truck
 from models import Package
-from db import get_truck_space_utilization, update_truck_space_utilization, get_truck, get_package
+from app.db import get_truck_space_utilization, update_truck_space_utilization, get_truck, get_package
 
 router = APIRouter()
 

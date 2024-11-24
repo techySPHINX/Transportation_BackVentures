@@ -1,7 +1,7 @@
 # routes/stops.py
 from fastapi import APIRouter, HTTPException
 from models import Stop
-from db import get_stop, update_stop
+from app.db import get_stop, update_stop
 
 router = APIRouter()
 

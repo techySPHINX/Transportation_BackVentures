@@ -2,7 +2,7 @@
 from fastapi import APIRouter, HTTPException
 from models import Truck
 from models import ThirdPartyPartner
-from db import get_available_capacity, share_capacity, get_truck, get_third_party_partner
+from app.db import get_available_capacity, share_capacity, get_truck, get_third_party_partner
 
 router = APIRouter()
 

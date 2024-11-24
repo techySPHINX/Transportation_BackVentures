@@ -1,6 +1,8 @@
 from sqlalchemy import create_engine
 import os
 from dotenv import load_dotenv
+from app.models import Truck, Route, Stop, Parcel, ThirdPartyPartner, Geofence, Alert
+
 
 from sqlalchemy.orm import sessionmaker
 
@@ -75,3 +77,20 @@ def update_third_party_partner(third_party_partner_id, third_party_partner):
     third_party_partner_obj.capacity = third_party_partner.capacity
     third_party_partner_obj.available_capacity = third_party_partner.available_capacity
     session.commit()
+
+
+def get_truck_location(truck_id):
+    truck = get_truck(truck_id)
+    if not truck:
+        return None
+    return {"latitude": truck.latitude, "longitude": truck.longitude}
+
+
+def update_truck_location(truck_id, location):
+    truck = get_truck(truck_id)
+    if not truck:
+        return False
+    truck.latitude = location.get("latitude")
+    truck.longitude = location.get("longitude")
+    session.commit()
+    return True

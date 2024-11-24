@@ -1,7 +1,7 @@
 # routes/trucks.py
 from fastapi import APIRouter, HTTPException
 from models import Truck
-from db import get_truck, update_truck
+from app.db import get_truck, update_truck
 
 router = APIRouter()
 
