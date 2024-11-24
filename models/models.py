@@ -1,8 +1,9 @@
 from typing import Optional
-from sqlalchemy import Column, Integer, String, Float 
+from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+Base = declarative_base()  # declare base class for all models
+
 
 class Truck(Base):
     __tablename__ = "trucks"
@@ -10,8 +11,8 @@ class Truck(Base):
     capacity = Column(Integer)
     current_load = Column(Integer)
     route_id = Column(Integer)
-    latitude = Column(Float) 
-    longitude = Column(Float) 
+    latitude = Column(Float)
+    longitude = Column(Float)
     status = Column(String)
 
 
@@ -21,7 +22,7 @@ class Route(Base):
     name = Column(String)
     distance = Column(Integer)
     start_point = Column(String)
-    end_point = Column(String) 
+    end_point = Column(String)
     intermediate_points = Column(String)
 
 
@@ -29,7 +30,7 @@ class Stop(Base):
     __tablename__ = "stops"
     id = Column(Integer, primary_key=True)
     name = Column(String)
-    location = Column(String) 
+    location = Column(String)
     route_id = Column(Integer)
     arrival_time = Column(String)
     departure_time = Column(String)
@@ -40,9 +41,9 @@ class Parcel(Base):
     id = Column(Integer, primary_key=True)
     weight = Column(Integer)
     volume = Column(Integer)
-    source = Column(String)  
-    destination = Column(String) 
-    truck_id = Column(Integer)  
+    source = Column(String)
+    destination = Column(String)
+    truck_id = Column(Integer)
 
 
 class ThirdPartyPartner(Base):
@@ -50,7 +51,7 @@ class ThirdPartyPartner(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     capacity = Column(Integer)  # Total capacity
-    available_capacity = Column(Integer) 
+    available_capacity = Column(Integer)
 
 
 class Geofence(Base):
@@ -66,4 +67,4 @@ class Alert(Base):
     id = Column(Integer, primary_key=True)
     truck_id = Column(Integer)  # Foreign key to `Truck`
     geofence_id = Column(Integer)  # Foreign key to `Geofence`
-    message = Column(String) 
+    message = Column(String)
