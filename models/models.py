@@ -2,7 +2,7 @@ from typing import Optional
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()  # declare base class for all models
+Base = declarative_base()
 
 
 class Truck(Base):
