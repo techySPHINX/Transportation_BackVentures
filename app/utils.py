@@ -1,6 +1,8 @@
 import requests
 import math
+from passlib.context import CryptContext
 
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 def get_mapmyindia_access_token(client_id, client_secret):
     """
@@ -45,3 +47,11 @@ def haversine(lat1, lon1, lat2, lon2):
         math.cos(math.radians(lat2)) * math.sin(dlon / 2) ** 2
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
     return R * c
+
+
+def hash_password(password: str):
+    return pwd_context.hash(password)
+
+
+def verify_password(plain_password: str, hashed_password: str):
+    return pwd_context.verify(plain_password, hashed_password)
